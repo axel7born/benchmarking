@@ -43,7 +43,7 @@ var server = https.createServer(ssl_options, function(request, response) {
      return
   }
 
-  function connect2db(){
+  function connect2db() {
     // get and validate we have appropriate data
     var queryData = url.parse(request.url, true).query
 
@@ -79,7 +79,7 @@ var server = https.createServer(ssl_options, function(request, response) {
         connect2db();
       } else {
         throw err;
-        }
+      }
     });
   }
   connect2db();
